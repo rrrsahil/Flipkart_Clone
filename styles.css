@@ -1,0 +1,467 @@
+/* Importing Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+/* General Resets and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1f3f6;
+    overflow:scroll;/* Allows scrolling on the page */
+}
+
+/* Root Variables for Colors */
+:root {
+    --primary-color: #2874f0;
+}
+
+/* Container Padding */
+.container {
+    padding: 0 8px;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    height: 56px;
+}
+header .nav-container{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    max-width: 1248px;
+    margin: 0 auto;
+}
+header .nav-container .logo {
+    display: flex;
+    min-width: 137px;
+    justify-content: flex-end;
+}
+header .nav-container .logo img{
+    width: 75px; /* Logo width */
+}
+
+header .search {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+}
+header .search .search-container{
+    width: 100%;
+    height: 36px;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 23%);
+    display: flex;
+}
+header .search .search-container input {
+    width: calc(100% - 32px);
+    padding: 16px;
+    outline: none;
+    border: none;
+}
+header .search .search-container button {
+    width: 36px;
+    height: 100%;
+    padding: 0 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: white;
+    border-radius: 0 2px 2px 0;
+    cursor: pointer;
+}
+
+/* Login and Other Header Sections */
+header .login {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+header .login button {
+    width: 122px;
+    padding: 5px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+header .become-seller {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+header .more{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+header .more svg {
+    margin-left: 8px;
+    rotate: -90deg;
+}
+
+header .cart {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    color: white;
+}
+header .cart svg {
+    margin-right: 8px;
+}
+
+/* Section 1 Styles */
+.section-1 {
+    width: 100%;
+    height: 112px;
+    background-color: white;
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 16%);
+}
+.section-1-container{
+    width: 1280px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+
+}
+.section-1-item{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.section-1-item img {
+    width: 64px;
+    height: 64px;
+}
+
+/* Slideshow Styles */
+.slideshow-container {
+    position: relative;
+    margin-top: 16px;
+    height: 280px;
+    max-width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+.mySlides {
+    display: none;
+    height: 100%;
+}
+
+img {
+    vertical-align: middle;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: 0.4} 
+    to {opacity: 1}
+}
+
+.dots-container {
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.dot {
+    height: 5px;
+    width: 5px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    cursor: pointer;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Section 3 Background Image */
+.section-3-container {
+    margin-top: 8px;
+    height: 122px;
+    background-image: url('flipkart_banner4.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Section 4 Styles */
+.section-4 container {
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+}
+.slide-content {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+.card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 30px;
+}
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+.card:hover {
+    transform: translateY(-10px);
+}
+.image-content {
+    padding: 20px;
+}
+.card-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.card-content {
+    padding: 10px 0;
+}
+.name {
+    font-size: 18px;
+    color: #007BFF;
+    margin-bottom: 5px;
+}
+.price {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+.button {
+    background-color: #007BFF;
+    color: #ffffff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Navigation Buttons for Slider */
+.swiper-navBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #007BFF;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 10;
+    user-select: none;
+}
+.prev {
+    left: 0;
+}
+.next {
+    right: 0;
+}
+
+/* Product Title Styling */
+.product_title{
+    font-size: 20px;
+}
+
+/* Responsive Design for Cards */
+@media (max-width: 768px) {
+    .card-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px) {
+    .card-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .swiper-navBtn {
+        display: none;
+    }
+}
+
+/* Section 5: Continuous Slideshow */
+.section-5 {
+    display: flex;
+    white-space: nowrap;
+    animation: slide 30s linear infinite;
+}
+
+.section-5 img {
+    width: 100%;
+    max-width: 200px;
+    margin: 5px 5px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.section-5 img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.section-5:hover {
+    animation-play-state: paused;
+}
+
+@media screen and (max-width: 768px) {
+    .section-5 img {
+        max-width: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section-5 img {
+        max-width: 100px;
+    }
+}
+
+/* Footer Styles */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    flex-wrap: wrap;
+    background-color: #000;
+    color: white;
+    height: 300px;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 14px;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 10px;
+  }
+
+  .social-links i {
+    font-size: 24px;
+    color: white;
+    transition: color 0.3s ease;
+  }
+
+  .social-links i:hover {
+    color: #ccc;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+    flex-wrap: wrap;
+    background-color: black;
+    color: white;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+  }
+
+  .footer-links a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    font-size: 14px;
+  }
+
+  .footer-links img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .payment-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .payment-icons img {
+    height: 30px;
+  }
+
+  .payment-icons .logo {
+    height: 20px;
+    width: auto;
+    border-radius: 3px;
+  }
+

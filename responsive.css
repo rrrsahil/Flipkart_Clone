@@ -1,0 +1,95 @@
+/* Responsive Design for Header */
+@media (max-width: 1200px) {
+    header .nav-container .search .search-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    header .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    header .nav-container .logo {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    
+    header .login, 
+    header .become-seller, 
+    header .more, 
+    header .cart {
+        margin: 5px 0;
+    }
+}
+
+/* Responsive Design for Section 1 */
+@media (max-width: 768px) {
+    .section-1-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-1-item {
+        margin-bottom: 10px;
+    }
+}
+
+/* Responsive Design for Slideshow */
+@media (max-width: 768px) {
+    .slideshow-container {
+        height: 200px;
+    }
+
+    .section-5 img {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slideshow-container {
+        height: 150px;
+    }
+    
+    .section-5 img {
+        max-width: 100px;
+    }
+}
+
+/* Responsive Design for Section 4 */
+@media (max-width: 768px) {
+    .card-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .card-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .swiper-navBtn {
+        display: none; /* Hide navigation buttons on small screens */
+    }
+}
+
+/* Responsive Design for Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .section {
+        margin-right: 0;
+    }
+
+    .social-links {
+        margin-top: 10px;
+    }
+
+    .payment-icons {
+        margin-top: 10px;
+    }
+}
